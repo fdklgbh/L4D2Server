@@ -1,0 +1,21 @@
+version: "3"
+services:
+  l4d2:
+    image: "cm2network/steamcmd:latest"
+    container_name: "l4d2"
+    ports:
+      # 面一个是外部端口,可以自己定义
+      - "27015:27015"
+    volumes:
+      #
+      - "./l4d2server:/home/steam/l4d2server"
+      - "./Steam::/home/steam/Steam"
+      - "./steamcmd:/home/steam/steamcmd"
+      - "./sh:/home/steam/sh"
+    entrypoint: [ "/bin/bash", "/home/steam/sh/install.sh" ]
+    command: [ "/bin/bash", "/home/steam/sh/run.sh" ]
+
+# 安装了1panel可以取消注释
+# networks:
+#     1panel-network:
+#         external: true
