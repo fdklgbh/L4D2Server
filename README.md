@@ -18,7 +18,7 @@ pause
 ```
 
 
-### 关于脚本:
+### 1. 关于脚本:
    1. 如果是使用frp来穿透联机,跳过这里的步骤,继续往下看
    2. 安装游戏: install.sh 会创建临时容器安装游戏到l4d2server文件夹中
    3. 首次启动游戏:run.sh 会后台启动服务
@@ -30,7 +30,7 @@ pause
       3. 最后重新启动容器l4d2
 ****
 
-### 通过免费的frp来穿透联机
+### 2. 通过免费的frp来穿透联机
    1. 安装游戏:install.sh 正常执行
    2. 首次启动游戏:
       1. 如果你自己也有容器再使用,且没有自己创建网络,那么就执行frp_create_network.sh(推荐)
@@ -72,7 +72,7 @@ Connection to Steam servers successful.
    VAC secure mode disabled.
 ```
 
-### 一点docker的命令(可能会用到的)
+### 3. 一点docker的命令(可能会用到的)
 
 下面命令中的l4d2是容器名称
 - 启动容器 docker start l4d2
@@ -82,3 +82,6 @@ Connection to Steam servers successful.
 - 查看容器实时日志 docker logs -f l4d2
 - 删除容器 docker rm -f l4d2
 
+
+### 4. 游戏模组管理器
+可以尝试用用 [L4D2-Mod-Manager](https://github.com/fdklgbh/L4D2-Mod-Manager)
